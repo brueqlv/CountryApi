@@ -43,13 +43,15 @@ namespace CountryApi.Controllers
                 return NotFound();
             }
 
-            return Ok(new
+            var response = new CountryDetailsResponse
             {
-                selectedCountry.Area,
-                selectedCountry.Population,
-                selectedCountry.Tld,
-                selectedCountry.Name.NativeName
-            });
+                Area = selectedCountry.Area,
+                Population = selectedCountry.Population,
+                Tld = selectedCountry.Tld,
+                NativeName = selectedCountry.Name.NativeName
+            };
+
+            return Ok(response);
         }
     }
 }

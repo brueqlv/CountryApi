@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CountryApi
+namespace CountryApi.Classes
 {
     public class CountriesService
     {
@@ -37,15 +37,14 @@ namespace CountryApi
                 response.EnsureSuccessStatusCode();
 
                 var responseContent = await response.Content.ReadAsStringAsync();
-                var countrie = JsonConvert.DeserializeObject<CountryInfo>(responseContent);
+                var countries = JsonConvert.DeserializeObject<List<CountryInfo>>(responseContent);  //Jāsaprot kā bez List šo panākt
 
-                return countrie;
+                return countries[0];
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
     }
 }

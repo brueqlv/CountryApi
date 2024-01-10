@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CountryApi.Classes;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CountryApi.Controllers
 {
@@ -35,8 +36,7 @@ namespace CountryApi.Controllers
         [HttpGet("{country}/details")]
         public async Task<IActionResult> GetCountryDetails(string country)
         {
-            var countries = await _countryClient.GetEuropeanUnionCountries();
-            var selectedCountry = countries.FirstOrDefault(c => c.Name.Common.ToLower() == country.ToLower());
+            var selectedCountry = await _countryClient.GetCountryByName(country);
 
             if (selectedCountry == null)
             {

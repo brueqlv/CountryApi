@@ -1,4 +1,4 @@
-using CountryApi;
+using CountryApi.Classes;
 using CountryApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -17,7 +17,6 @@ namespace CountryApiTest
             _httpClientMock = new Mock<HttpClient>();
             _countriesService = new CountriesService(_httpClientMock.Object);
             _controller = new CountryController(_countriesService);
-
         }
 
         [Test]
@@ -85,6 +84,7 @@ namespace CountryApiTest
                 Assert.True(firstDensity >= secondDensity);
             }
         }
+
         [Test]
         public async Task GetCountryDetails_Should_Return_Latvia()
         {

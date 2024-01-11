@@ -27,20 +27,31 @@ Prerequisites:
    b. cd <project-directory>
 
 Running the Web Api:
+
 1.Open terminal or command prompt in the project directory.
+
 2.Build the project using the following command: dotnet build
+
 3.Run the project: dotnet run
+
 4.Once the application is running, open your web browser and navigate to 
 https://localhost:7217/swagger. This will open the Swagger UI, where you can test your API endpoints.
 Change localhost number to your number.
 
 Testint the endpoints:
+
 1.To get top 10 countries by population, use the following endpoint in Swagger or any API testing tool:
+
   a. https://localhost:7217/api/Country/top10/population
+  
 2. To get top 10 countries by population density, use the following endoint:
+   
   a. https://localhost:7217/api/Country/top10/populationDensity
-3. To get details about specific country, use the following endpoint:
+
+4. To get details about specific country, use the following endpoint:
+   
   a. https://localhost:7217/api/Country/{country}/details
+  
   b. https://localhost:7217/api/Country/Latvia/details
 
 Remember to replace <repository-url> and <project-directory> with your actual Git repository URL and project directory.

@@ -97,8 +97,8 @@ namespace CountryApiTest
             var expectedArea = 64559;
             var expectedPopulation = 1901548;
 
-            Assert.AreEqual(expectedArea, result.Area);
-            Assert.AreEqual(expectedPopulation, result.Population);
+            Assert.That(result.Area, Is.EqualTo(expectedArea));
+            Assert.That(result.Population, Is.EqualTo(expectedPopulation));
         }
     }
 }

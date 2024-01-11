@@ -37,7 +37,7 @@ namespace CountryApi.Classes
                 response.EnsureSuccessStatusCode();
 
                 var responseContent = await response.Content.ReadAsStringAsync();
-                var countries = JsonConvert.DeserializeObject<List<CountryInfo>>(responseContent);  //Jāsaprot kā bez List šo panākt
+                var countries = JsonConvert.DeserializeObject<List<CountryInfo>>(responseContent);
 
                 return countries[0];
             }

@@ -41,9 +41,9 @@ Running the Web Api:
 
 4.Once the application is running, open your web browser and navigate to 
 https://localhost:7217/swagger. This will open the Swagger UI, where you can test your API endpoints.
-Change localhost number to your number.
+Change localhost port number to your number.
 
-Testint the endpoints:
+Testing the endpoints:
 
 1.To get top 10 countries by population, use the following endpoint in Swagger or any API testing tool:
 

@@ -20,10 +20,15 @@ How to run this application:
 
 Prerequisites:
 1. Make sure you have necessary tools installed:
+   
    a. .Net SDK
+   
    b. An integrated development enviroment like Visual Studio
-2. Clone the project:
+   
+3. Clone the project:
+   
    a. git clone <repository-url>
+   
    b. cd <project-directory>
 
 Running the Web Api:

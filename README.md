@@ -27,9 +27,9 @@ Prerequisites:
    
 3. Clone the project:
    
-   a. git clone <repository-url>
+   a. git clone "repository-url"
    
-   b. cd <project-directory>
+   b. cd "project-directory"
 
 Running the Web Api:
 
